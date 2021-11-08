@@ -1,0 +1,29 @@
+uuid: 847a4ad4-180d-4387-8060-bdbf166a6595
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.facets_summary_config
+  module:
+    - facets_summary
+    - system
+  theme:
+    - bartik
+_core:
+  default_config_hash: Zhq6nSn-Mgqi6UJaUbhMyrMmTpzBgM4Arq6jxNsMPZo
+id: facetssummaryconfig
+theme: bartik
+region: content
+weight: -4
+provider: null
+plugin: 'facets_summary_block:facets_summary_config'
+settings:
+  id: 'facets_summary_block:facets_summary_config'
+  label: 'Facets Summary Config'
+  provider: facets_summary
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /facets-summary-config-test
+    negate: false

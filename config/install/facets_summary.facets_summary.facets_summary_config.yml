@@ -1,0 +1,32 @@
+uuid: 9eae1ce0-db3c-4a02-8de0-ac43d3a100c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.test_index
+    - views.view.facets_summary_config_test
+  module:
+    - search_api
+_core:
+  default_config_hash: 8fKMMOpq9RFdhVuycNpCVDJE73yjO5ZSNSSMp7yrS6Y
+id: facets_summary_config
+name: 'Facets Summary Config'
+facets:
+  text:
+    checked: true
+    label: Text
+    separator: ', '
+    weight: 0
+    show_count: false
+facet_source_id: 'search_api:views_page__facets_summary_config_test__page_1'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '5'
+    settings: {  }

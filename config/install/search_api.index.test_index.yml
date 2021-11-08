@@ -1,0 +1,74 @@
+uuid: d2f3ffe3-611d-428f-aad3-865768aa4485
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_text
+    - search_api.server.test_search_serer
+  module:
+    - node
+    - search_api
+_core:
+  default_config_hash: 1n1f9_PXj6UX272djrjVcEg4hBC6Nox8PUD9jeca2cY
+id: test_index
+name: 'Test index'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  field_text:
+    label: Text
+    datasource_id: 'entity:node'
+    property_path: field_text
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_text
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          test_content_type: ''
+  uid:
+    label: 'Authored by'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - test_content_type
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  track_changes_in_references: true
+  cron_limit: 50
+server: test_search_serer

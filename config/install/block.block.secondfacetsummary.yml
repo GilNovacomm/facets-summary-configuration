@@ -1,0 +1,27 @@
+uuid: f8e1caf0-556d-493a-9151-4fd9cfc76943
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.second_facet_summary
+  module:
+    - facets_summary
+    - system
+  theme:
+    - bartik
+id: secondfacetsummary
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'facets_summary_block:second_facet_summary'
+settings:
+  id: 'facets_summary_block:second_facet_summary'
+  label: 'Second Facet Summary'
+  provider: facets_summary
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /second-view-facets
+    negate: false

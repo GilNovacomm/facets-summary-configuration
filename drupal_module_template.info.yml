@@ -4,3 +4,12 @@ package: OpenEuropa
 
 core_version_requirement: ^8.9 || ^9.1
 type: module
+
+dependencies:
+  - drupal:views
+  - drupal:field_ui
+  - facets:facets
+  - facets_form:facets_form
+  - facets_summary:facets_summary
+  - search_api:search_api
+  - search_api_db:search_api_db

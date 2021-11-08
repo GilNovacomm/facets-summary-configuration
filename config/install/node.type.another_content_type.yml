@@ -1,0 +1,11 @@
+uuid: c888f430-99f1-422f-9efa-7dfa076becd9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Another content type'
+type: another_content_type
+description: 'second test content type'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

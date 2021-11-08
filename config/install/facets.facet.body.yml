@@ -1,0 +1,60 @@
+uuid: 08f6ca46-043d-4783-afc8-e4be1bbb0395
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.second_index
+    - views.view.second_view_facets
+  module:
+    - search_api
+id: body
+name: Body
+url_alias: body
+weight: 0
+min_count: 1
+show_only_one_result: false
+field_identifier: body
+facet_source_id: 'search_api:views_page__second_view_facets__page_1'
+widget:
+  type: facets_form_dropdown
+  config:
+    default_option_label: Choose
+    child_items_prefix: '-'
+    disabled_on_empty: false
+    show_numbers: false
+query_operator: or
+use_hierarchy: false
+keep_hierarchy_parents_active: false
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
+hard_limit: 0
+exclude: false
+only_visible_when_facet_source_is_visible: true
+processor_configs:
+  active_widget_order:
+    processor_id: active_widget_order
+    weights:
+      sort: 20
+    settings:
+      sort: DESC
+  count_widget_order:
+    processor_id: count_widget_order
+    weights:
+      sort: 30
+    settings:
+      sort: DESC
+  display_value_widget_order:
+    processor_id: display_value_widget_order
+    weights:
+      sort: 40
+    settings:
+      sort: ASC
+  url_processor_handler:
+    processor_id: url_processor_handler
+    weights:
+      pre_query: 50
+      build: 15
+    settings: {  }
+empty_behavior:
+  behavior: none
+show_title: false

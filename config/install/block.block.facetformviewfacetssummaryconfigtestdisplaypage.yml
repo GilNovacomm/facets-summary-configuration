@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.text
+  module:
+    - facets_form
+  theme:
+    - bartik
+id: facetformviewfacetssummaryconfigtestdisplaypage
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facets_form:search_api:views_page__facets_summary_config_test__page_1'
+settings:
+  id: 'facets_form:search_api:views_page__facets_summary_config_test__page_1'
+  label: 'Facet form: View Facets Summary config test, display Page'
+  provider: facets_form
+  label_display: '0'
+  button:
+    label:
+      submit: Search
+      reset: 'Clear filters'
+  facets: {  }
+visibility: {  }

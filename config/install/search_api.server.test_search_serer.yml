@@ -1,0 +1,16 @@
+uuid: 125b9ffd-fd74-4b79-93ee-ea34cc280b11
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+_core:
+  default_config_hash: LmRyJzuspNKsHM_abhBBcXVfFUOCq10ECBDN7RVKV6E
+id: test_search_serer
+name: 'Test search serer'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: words

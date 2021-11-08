@@ -1,0 +1,30 @@
+uuid: 40bbc7c0-3798-49e4-964b-966cf91df870
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.second_index
+    - views.view.second_view_facets
+  module:
+    - search_api
+id: second_facet_summary
+name: 'Second Facet Summary'
+facets:
+  body:
+    checked: true
+    label: Body
+    separator: ', '
+    weight: 0
+    show_count: false
+facet_source_id: 'search_api:views_page__second_view_facets__page_1'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '5'
+    settings: {  }

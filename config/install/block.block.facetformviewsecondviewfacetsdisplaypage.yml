@@ -1,0 +1,27 @@
+uuid: 9fd927f0-14be-456c-859c-6edac8b8c357
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.body
+  module:
+    - facets_form
+  theme:
+    - bartik
+id: facetformviewsecondviewfacetsdisplaypage
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facets_form:search_api:views_page__second_view_facets__page_1'
+settings:
+  id: 'facets_form:search_api:views_page__second_view_facets__page_1'
+  label: 'Facet form: View Second view facets, display Page'
+  provider: facets_form
+  label_display: visible
+  button:
+    label:
+      submit: Search
+      reset: 'Clear filters'
+  facets: {  }
+visibility: {  }
